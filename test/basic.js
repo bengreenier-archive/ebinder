@@ -54,6 +54,18 @@ describe("ebinder", function () {
 		emitter.emit("test", 1, "two");
 	});
 	
+	it("should support prefix", function (done) {
+		var emitter = new EventEmitter();
+		var object = {
+			test: function() {
+				done();
+			}
+		};
+		
+		ebinder(emitter, object, "prefix");
+		emitter.emit("prefix:test");
+	});
+	
 	it("should throw when given invalid arguments", function () {
 		assert.throws(function() {
 			ebinder(1,{});

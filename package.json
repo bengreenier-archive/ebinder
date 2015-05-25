@@ -1,6 +1,6 @@
 {
   "name": "ebinder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "a little module for batch binding to event emitters",
   "main": "index.js",
   "scripts": {
